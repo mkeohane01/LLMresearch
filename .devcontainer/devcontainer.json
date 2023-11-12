@@ -1,0 +1,16 @@
+{
+    "name": "Python 3.8 Codespace",
+    "dockerFile": "Dockerfile",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "ms-python.python"
+    ],
+    "runArgs": ["-u", "root"],
+    "remoteUser": "vscode",
+    "forwardPorts": [3000, 8888],
+    "settings": {
+        "python.pythonPath": "/usr/local/bin/python3.8"
+    }
+}
