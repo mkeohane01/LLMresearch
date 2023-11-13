@@ -9,7 +9,7 @@ Helm website can be found [here](https://crfm.stanford.edu/helm/latest/?).
 ## Use
 To install the package using pip
 ```bash
-pip install crfm-helm
+pip install crfm-helm[all] 
 ```
 
 In order to run a helm evaluation. Need to update run_specs.conf accordingly.
