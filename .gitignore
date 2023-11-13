@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# cant push data to github
+benchmark_output/scenarios/mmlu/data/
+
 # C extensions
 *.so
 
