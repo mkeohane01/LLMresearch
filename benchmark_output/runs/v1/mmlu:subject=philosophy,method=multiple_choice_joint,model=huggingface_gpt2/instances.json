@@ -1,0 +1,352 @@
+[
+  {
+    "input": {
+      "text": "What does the notion of \u201cmeaning in life\u201d refer to?"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "external meaning"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "god's plan"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "internalmeaning"
+        },
+        "tags": [
+          "correct"
+        ]
+      },
+      {
+        "output": {
+          "text": "meaning in an afterlife"
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "id147"
+  },
+  {
+    "input": {
+      "text": "In Plato's idealism, the unchanging Ideas or \"Forms\" in terms of which sensible objects both exist and are known must transcend (that is, exist beyond) the changing realm of appearances; because if Forms changed, then:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "the only things in the sensible world that we could ever experience would be concepts."
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "the sensible realm (in contrast to the intelligible realm) would consist only of copies of real things."
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "nothing in the experienced world could be or be identified as one determinate thing or another."
+        },
+        "tags": [
+          "correct"
+        ]
+      },
+      {
+        "output": {
+          "text": "the sensible world would consist of unchanging Forms."
+        },
+        "tags": []
+      }
+    ],
+    "split": "valid",
+    "id": "id11"
+  },
+  {
+    "input": {
+      "text": "Aristotle says  that what makes things be what they are--their essence--does not exist apart from individ-uals that exist in the world.  So if all the members of a species were destroyed, then their essence or form:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "would likewise be destroyed."
+        },
+        "tags": [
+          "correct"
+        ]
+      },
+      {
+        "output": {
+          "text": "would be destroyed only if there were no one around to remember the species."
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "would continue existing (as with Plato's Forms) in some other realm of being."
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "would not be destroyed because there was no essence or form originally to be destroyed; there are only individuals, not universal essences or natures of things."
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "id65"
+  },
+  {
+    "input": {
+      "text": "Aesthetic values have to do with _______"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "the moral value of works of art and other objects that could be judged beautiful"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "good and bad works of art and other objects that could be judged beautiful"
+        },
+        "tags": [
+          "correct"
+        ]
+      },
+      {
+        "output": {
+          "text": "the moral values of artists and critics"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "pragmatic decisions regarding the display of art"
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "id344"
+  },
+  {
+    "input": {
+      "text": "According to Moore, we are thinking about good whenever we think about:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "pleasure."
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "things that we desire."
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "intrinsic value."
+        },
+        "tags": [
+          "correct"
+        ]
+      },
+      {
+        "output": {
+          "text": "none of the above."
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "id59"
+  },
+  {
+    "input": {
+      "text": "Craig argues that the series of events in time cannot be actually infinite, so we know that _____."
+    },
+    "references": [
+      {
+        "output": {
+          "text": "the universe is finite in the past and began to exist"
+        },
+        "tags": [
+          "correct"
+        ]
+      },
+      {
+        "output": {
+          "text": "the universe is infinite in the past"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "the universe never is uncaused"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "the universe exists only in the mind"
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "id291"
+  },
+  {
+    "input": {
+      "text": "Baier claims that ethical skepticism is often due to:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "confused metaphysical theories."
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "confused epistemological theories."
+        },
+        "tags": [
+          "correct"
+        ]
+      },
+      {
+        "output": {
+          "text": "confused religious views."
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "confused scientific theories."
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "id131"
+  },
+  {
+    "input": {
+      "text": "Mill says that the ultimate end of utilitarianism is an existence as free of pain as possible and as rich as possible in _____."
+    },
+    "references": [
+      {
+        "output": {
+          "text": "lower pleasures"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "spiritual attainment"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "social achievement"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "enjoyments"
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "id222"
+  },
+  {
+    "input": {
+      "text": "Philo says the analogy that Cleanthes uses to make his case is _____."
+    },
+    "references": [
+      {
+        "output": {
+          "text": "too complicated"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "weak"
+        },
+        "tags": [
+          "correct"
+        ]
+      },
+      {
+        "output": {
+          "text": "strong"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "not based on a legitimate method of reasoning"
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "id259"
+  },
+  {
+    "input": {
+      "text": "Baggini accuses pessimists of mixing up the two senses of _____."
+    },
+    "references": [
+      {
+        "output": {
+          "text": "philosophy"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "religion"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "meaning"
+        },
+        "tags": [
+          "correct"
+        ]
+      },
+      {
+        "output": {
+          "text": "time"
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "id105"
+  }
+]

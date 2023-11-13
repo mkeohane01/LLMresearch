@@ -1,0 +1,548 @@
+{
+  "title": "Calibration",
+  "header": [
+    {
+      "value": "Model/adapter",
+      "markdown": false,
+      "metadata": {}
+    },
+    {
+      "value": "Mean win rate",
+      "description": "How many models this model outperform on average (over columns).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {}
+    },
+    {
+      "value": "MMLU - Max prob",
+      "description": "The Massive Multitask Language Understanding (MMLU) benchmark for knowledge-intensive question answering across 57 domains [(Hendrycks et al., 2021)](https://openreview.net/forum?id=d7KBjmI3GmQ).\n\nMax prob: Model's average confidence in its prediction (only computed for classification tasks)",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Max prob",
+        "run_group": "MMLU"
+      }
+    },
+    {
+      "value": "MMLU - ECE (1-bin)",
+      "description": "The Massive Multitask Language Understanding (MMLU) benchmark for knowledge-intensive question answering across 57 domains [(Hendrycks et al., 2021)](https://openreview.net/forum?id=d7KBjmI3GmQ).\n\n1-bin expected calibration error: The (absolute value) difference between the model's average confidence and accuracy (only computed for classification tasks).",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "ECE (1-bin)",
+        "run_group": "MMLU"
+      }
+    },
+    {
+      "value": "MMLU - ECE (10-bin)",
+      "description": "The Massive Multitask Language Understanding (MMLU) benchmark for knowledge-intensive question answering across 57 domains [(Hendrycks et al., 2021)](https://openreview.net/forum?id=d7KBjmI3GmQ).\n\n10-bin expected calibration error: The average difference between the model's confidence and accuracy, averaged across 10 bins where each bin contains an equal number of points (only computed for classification tasks). Warning - not reliable for small datasets (e.g., with < 300 examples) because each bin will have very few examples.",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "ECE (10-bin)",
+        "run_group": "MMLU"
+      }
+    },
+    {
+      "value": "MMLU - Selective Acc",
+      "description": "The Massive Multitask Language Understanding (MMLU) benchmark for knowledge-intensive question answering across 57 domains [(Hendrycks et al., 2021)](https://openreview.net/forum?id=d7KBjmI3GmQ).\n\nSelective coverage-accuracy area: The area under the coverage-accuracy curve, a standard selective classification metric (only computed for classification tasks).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Selective Acc",
+        "run_group": "MMLU"
+      }
+    },
+    {
+      "value": "MMLU - Acc@10%",
+      "description": "The Massive Multitask Language Understanding (MMLU) benchmark for knowledge-intensive question answering across 57 domains [(Hendrycks et al., 2021)](https://openreview.net/forum?id=d7KBjmI3GmQ).\n\nAccuracy at 10% coverage: The accuracy for the 10% of predictions that the model is most confident on (only computed for classification tasks).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Acc@10%",
+        "run_group": "MMLU"
+      }
+    },
+    {
+      "value": "MMLU - Platt-scaled ECE (1-bin)",
+      "description": "The Massive Multitask Language Understanding (MMLU) benchmark for knowledge-intensive question answering across 57 domains [(Hendrycks et al., 2021)](https://openreview.net/forum?id=d7KBjmI3GmQ).\n\n1-bin expected calibration error (after Platt scaling): 1-bin ECE computed after applying Platt scaling to recalibrate the model's predicted probabilities.",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "Platt-scaled ECE (1-bin)",
+        "run_group": "MMLU"
+      }
+    },
+    {
+      "value": "MMLU - Platt-scaled ECE (10-bin)",
+      "description": "The Massive Multitask Language Understanding (MMLU) benchmark for knowledge-intensive question answering across 57 domains [(Hendrycks et al., 2021)](https://openreview.net/forum?id=d7KBjmI3GmQ).\n\n10-bin Expected Calibration Error (after Platt scaling): 10-bin ECE computed after applying Platt scaling to recalibrate the model's predicted probabilities.",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "Platt-scaled ECE (10-bin)",
+        "run_group": "MMLU"
+      }
+    },
+    {
+      "value": "MMLU - Platt Coef",
+      "description": "The Massive Multitask Language Understanding (MMLU) benchmark for knowledge-intensive question answering across 57 domains [(Hendrycks et al., 2021)](https://openreview.net/forum?id=d7KBjmI3GmQ).\n\nPlatt Scaling Coefficient: Coefficient of the Platt scaling classifier (can compare this across tasks).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Platt Coef",
+        "run_group": "MMLU"
+      }
+    },
+    {
+      "value": "MMLU - Platt Intercept",
+      "description": "The Massive Multitask Language Understanding (MMLU) benchmark for knowledge-intensive question answering across 57 domains [(Hendrycks et al., 2021)](https://openreview.net/forum?id=d7KBjmI3GmQ).\n\nPlatt Scaling Intercept: Intercept of the Platt scaling classifier (can compare this across tasks).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Platt Intercept",
+        "run_group": "MMLU"
+      }
+    },
+    {
+      "value": "IMDB - Max prob",
+      "description": "The IMDB benchmark for sentiment analysis in movie review [(Maas et al., 2011)](https://aclanthology.org/P11-1015/).\n\nMax prob: Model's average confidence in its prediction (only computed for classification tasks)",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Max prob",
+        "run_group": "IMDB"
+      }
+    },
+    {
+      "value": "IMDB - ECE (1-bin)",
+      "description": "The IMDB benchmark for sentiment analysis in movie review [(Maas et al., 2011)](https://aclanthology.org/P11-1015/).\n\n1-bin expected calibration error: The (absolute value) difference between the model's average confidence and accuracy (only computed for classification tasks).",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "ECE (1-bin)",
+        "run_group": "IMDB"
+      }
+    },
+    {
+      "value": "IMDB - ECE (10-bin)",
+      "description": "The IMDB benchmark for sentiment analysis in movie review [(Maas et al., 2011)](https://aclanthology.org/P11-1015/).\n\n10-bin expected calibration error: The average difference between the model's confidence and accuracy, averaged across 10 bins where each bin contains an equal number of points (only computed for classification tasks). Warning - not reliable for small datasets (e.g., with < 300 examples) because each bin will have very few examples.",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "ECE (10-bin)",
+        "run_group": "IMDB"
+      }
+    },
+    {
+      "value": "IMDB - Selective Acc",
+      "description": "The IMDB benchmark for sentiment analysis in movie review [(Maas et al., 2011)](https://aclanthology.org/P11-1015/).\n\nSelective coverage-accuracy area: The area under the coverage-accuracy curve, a standard selective classification metric (only computed for classification tasks).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Selective Acc",
+        "run_group": "IMDB"
+      }
+    },
+    {
+      "value": "IMDB - Acc@10%",
+      "description": "The IMDB benchmark for sentiment analysis in movie review [(Maas et al., 2011)](https://aclanthology.org/P11-1015/).\n\nAccuracy at 10% coverage: The accuracy for the 10% of predictions that the model is most confident on (only computed for classification tasks).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Acc@10%",
+        "run_group": "IMDB"
+      }
+    },
+    {
+      "value": "IMDB - Platt-scaled ECE (1-bin)",
+      "description": "The IMDB benchmark for sentiment analysis in movie review [(Maas et al., 2011)](https://aclanthology.org/P11-1015/).\n\n1-bin expected calibration error (after Platt scaling): 1-bin ECE computed after applying Platt scaling to recalibrate the model's predicted probabilities.",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "Platt-scaled ECE (1-bin)",
+        "run_group": "IMDB"
+      }
+    },
+    {
+      "value": "IMDB - Platt-scaled ECE (10-bin)",
+      "description": "The IMDB benchmark for sentiment analysis in movie review [(Maas et al., 2011)](https://aclanthology.org/P11-1015/).\n\n10-bin Expected Calibration Error (after Platt scaling): 10-bin ECE computed after applying Platt scaling to recalibrate the model's predicted probabilities.",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "Platt-scaled ECE (10-bin)",
+        "run_group": "IMDB"
+      }
+    },
+    {
+      "value": "IMDB - Platt Coef",
+      "description": "The IMDB benchmark for sentiment analysis in movie review [(Maas et al., 2011)](https://aclanthology.org/P11-1015/).\n\nPlatt Scaling Coefficient: Coefficient of the Platt scaling classifier (can compare this across tasks).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Platt Coef",
+        "run_group": "IMDB"
+      }
+    },
+    {
+      "value": "IMDB - Platt Intercept",
+      "description": "The IMDB benchmark for sentiment analysis in movie review [(Maas et al., 2011)](https://aclanthology.org/P11-1015/).\n\nPlatt Scaling Intercept: Intercept of the Platt scaling classifier (can compare this across tasks).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Platt Intercept",
+        "run_group": "IMDB"
+      }
+    },
+    {
+      "value": "RAFT - Max prob",
+      "description": "The Real-world annotated few-shot (RAFT) meta-benchmark of 11 real-world text classification tasks [(Alex et al., 2021)](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/ca46c1b9512a7a8315fa3c5a946e8265-Abstract-round2.html).\n\nMax prob: Model's average confidence in its prediction (only computed for classification tasks)",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Max prob",
+        "run_group": "RAFT"
+      }
+    },
+    {
+      "value": "RAFT - ECE (1-bin)",
+      "description": "The Real-world annotated few-shot (RAFT) meta-benchmark of 11 real-world text classification tasks [(Alex et al., 2021)](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/ca46c1b9512a7a8315fa3c5a946e8265-Abstract-round2.html).\n\n1-bin expected calibration error: The (absolute value) difference between the model's average confidence and accuracy (only computed for classification tasks).",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "ECE (1-bin)",
+        "run_group": "RAFT"
+      }
+    },
+    {
+      "value": "RAFT - ECE (10-bin)",
+      "description": "The Real-world annotated few-shot (RAFT) meta-benchmark of 11 real-world text classification tasks [(Alex et al., 2021)](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/ca46c1b9512a7a8315fa3c5a946e8265-Abstract-round2.html).\n\n10-bin expected calibration error: The average difference between the model's confidence and accuracy, averaged across 10 bins where each bin contains an equal number of points (only computed for classification tasks). Warning - not reliable for small datasets (e.g., with < 300 examples) because each bin will have very few examples.",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "ECE (10-bin)",
+        "run_group": "RAFT"
+      }
+    },
+    {
+      "value": "RAFT - Selective Acc",
+      "description": "The Real-world annotated few-shot (RAFT) meta-benchmark of 11 real-world text classification tasks [(Alex et al., 2021)](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/ca46c1b9512a7a8315fa3c5a946e8265-Abstract-round2.html).\n\nSelective coverage-accuracy area: The area under the coverage-accuracy curve, a standard selective classification metric (only computed for classification tasks).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Selective Acc",
+        "run_group": "RAFT"
+      }
+    },
+    {
+      "value": "RAFT - Acc@10%",
+      "description": "The Real-world annotated few-shot (RAFT) meta-benchmark of 11 real-world text classification tasks [(Alex et al., 2021)](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/ca46c1b9512a7a8315fa3c5a946e8265-Abstract-round2.html).\n\nAccuracy at 10% coverage: The accuracy for the 10% of predictions that the model is most confident on (only computed for classification tasks).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Acc@10%",
+        "run_group": "RAFT"
+      }
+    },
+    {
+      "value": "RAFT - Platt-scaled ECE (1-bin)",
+      "description": "The Real-world annotated few-shot (RAFT) meta-benchmark of 11 real-world text classification tasks [(Alex et al., 2021)](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/ca46c1b9512a7a8315fa3c5a946e8265-Abstract-round2.html).\n\n1-bin expected calibration error (after Platt scaling): 1-bin ECE computed after applying Platt scaling to recalibrate the model's predicted probabilities.",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "Platt-scaled ECE (1-bin)",
+        "run_group": "RAFT"
+      }
+    },
+    {
+      "value": "RAFT - Platt-scaled ECE (10-bin)",
+      "description": "The Real-world annotated few-shot (RAFT) meta-benchmark of 11 real-world text classification tasks [(Alex et al., 2021)](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/ca46c1b9512a7a8315fa3c5a946e8265-Abstract-round2.html).\n\n10-bin Expected Calibration Error (after Platt scaling): 10-bin ECE computed after applying Platt scaling to recalibrate the model's predicted probabilities.",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "Platt-scaled ECE (10-bin)",
+        "run_group": "RAFT"
+      }
+    },
+    {
+      "value": "RAFT - Platt Coef",
+      "description": "The Real-world annotated few-shot (RAFT) meta-benchmark of 11 real-world text classification tasks [(Alex et al., 2021)](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/ca46c1b9512a7a8315fa3c5a946e8265-Abstract-round2.html).\n\nPlatt Scaling Coefficient: Coefficient of the Platt scaling classifier (can compare this across tasks).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Platt Coef",
+        "run_group": "RAFT"
+      }
+    },
+    {
+      "value": "RAFT - Platt Intercept",
+      "description": "The Real-world annotated few-shot (RAFT) meta-benchmark of 11 real-world text classification tasks [(Alex et al., 2021)](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/ca46c1b9512a7a8315fa3c5a946e8265-Abstract-round2.html).\n\nPlatt Scaling Intercept: Intercept of the Platt scaling classifier (can compare this across tasks).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Platt Intercept",
+        "run_group": "RAFT"
+      }
+    },
+    {
+      "value": "CivilComments - Max prob",
+      "description": "The CivilComments benchmark for toxicity detection [(Borkan et al., 2019)](https://arxiv.org/pdf/1903.04561.pdf).\n\nMax prob: Model's average confidence in its prediction (only computed for classification tasks)",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Max prob",
+        "run_group": "CivilComments"
+      }
+    },
+    {
+      "value": "CivilComments - ECE (1-bin)",
+      "description": "The CivilComments benchmark for toxicity detection [(Borkan et al., 2019)](https://arxiv.org/pdf/1903.04561.pdf).\n\n1-bin expected calibration error: The (absolute value) difference between the model's average confidence and accuracy (only computed for classification tasks).",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "ECE (1-bin)",
+        "run_group": "CivilComments"
+      }
+    },
+    {
+      "value": "CivilComments - ECE (10-bin)",
+      "description": "The CivilComments benchmark for toxicity detection [(Borkan et al., 2019)](https://arxiv.org/pdf/1903.04561.pdf).\n\n10-bin expected calibration error: The average difference between the model's confidence and accuracy, averaged across 10 bins where each bin contains an equal number of points (only computed for classification tasks). Warning - not reliable for small datasets (e.g., with < 300 examples) because each bin will have very few examples.",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "ECE (10-bin)",
+        "run_group": "CivilComments"
+      }
+    },
+    {
+      "value": "CivilComments - Selective Acc",
+      "description": "The CivilComments benchmark for toxicity detection [(Borkan et al., 2019)](https://arxiv.org/pdf/1903.04561.pdf).\n\nSelective coverage-accuracy area: The area under the coverage-accuracy curve, a standard selective classification metric (only computed for classification tasks).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Selective Acc",
+        "run_group": "CivilComments"
+      }
+    },
+    {
+      "value": "CivilComments - Acc@10%",
+      "description": "The CivilComments benchmark for toxicity detection [(Borkan et al., 2019)](https://arxiv.org/pdf/1903.04561.pdf).\n\nAccuracy at 10% coverage: The accuracy for the 10% of predictions that the model is most confident on (only computed for classification tasks).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Acc@10%",
+        "run_group": "CivilComments"
+      }
+    },
+    {
+      "value": "CivilComments - Platt-scaled ECE (1-bin)",
+      "description": "The CivilComments benchmark for toxicity detection [(Borkan et al., 2019)](https://arxiv.org/pdf/1903.04561.pdf).\n\n1-bin expected calibration error (after Platt scaling): 1-bin ECE computed after applying Platt scaling to recalibrate the model's predicted probabilities.",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "Platt-scaled ECE (1-bin)",
+        "run_group": "CivilComments"
+      }
+    },
+    {
+      "value": "CivilComments - Platt-scaled ECE (10-bin)",
+      "description": "The CivilComments benchmark for toxicity detection [(Borkan et al., 2019)](https://arxiv.org/pdf/1903.04561.pdf).\n\n10-bin Expected Calibration Error (after Platt scaling): 10-bin ECE computed after applying Platt scaling to recalibrate the model's predicted probabilities.",
+      "markdown": false,
+      "lower_is_better": true,
+      "metadata": {
+        "metric": "Platt-scaled ECE (10-bin)",
+        "run_group": "CivilComments"
+      }
+    },
+    {
+      "value": "CivilComments - Platt Coef",
+      "description": "The CivilComments benchmark for toxicity detection [(Borkan et al., 2019)](https://arxiv.org/pdf/1903.04561.pdf).\n\nPlatt Scaling Coefficient: Coefficient of the Platt scaling classifier (can compare this across tasks).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Platt Coef",
+        "run_group": "CivilComments"
+      }
+    },
+    {
+      "value": "CivilComments - Platt Intercept",
+      "description": "The CivilComments benchmark for toxicity detection [(Borkan et al., 2019)](https://arxiv.org/pdf/1903.04561.pdf).\n\nPlatt Scaling Intercept: Intercept of the Platt scaling classifier (can compare this across tasks).",
+      "markdown": false,
+      "lower_is_better": false,
+      "metadata": {
+        "metric": "Platt Intercept",
+        "run_group": "CivilComments"
+      }
+    }
+  ],
+  "rows": [
+    [
+      {
+        "value": "huggingface/gpt2",
+        "description": "",
+        "markdown": false
+      },
+      {
+        "markdown": false
+      },
+      {
+        "value": 1.0,
+        "description": "min=1, mean=1, max=1, sum=1 (1)",
+        "style": {
+          "font-weight": "bold"
+        },
+        "markdown": false
+      },
+      {
+        "description": "1 matching runs, but no matching metrics",
+        "markdown": false
+      },
+      {
+        "description": "1 matching runs, but no matching metrics",
+        "markdown": false
+      },
+      {
+        "description": "1 matching runs, but no matching metrics",
+        "markdown": false
+      },
+      {
+        "description": "1 matching runs, but no matching metrics",
+        "markdown": false
+      },
+      {
+        "description": "1 matching runs, but no matching metrics",
+        "markdown": false
+      },
+      {
+        "description": "1 matching runs, but no matching metrics",
+        "markdown": false
+      },
+      {
+        "description": "1 matching runs, but no matching metrics",
+        "markdown": false
+      },
+      {
+        "description": "1 matching runs, but no matching metrics",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      },
+      {
+        "description": "No matching runs",
+        "markdown": false
+      }
+    ]
+  ],
+  "links": [
+    {
+      "text": "LaTeX",
+      "href": "benchmark_output/runs/v1/groups/latex/calibration_calibration_detailed.tex"
+    },
+    {
+      "text": "JSON",
+      "href": "benchmark_output/runs/v1/groups/json/calibration_calibration_detailed.json"
+    }
+  ],
+  "name": "calibration_detailed"
+}

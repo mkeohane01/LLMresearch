@@ -1,0 +1,3 @@
+{
+  "mmlu:subject=philosophy,method=multiple_choice_joint,model=huggingface_gpt2": "v1"
+}

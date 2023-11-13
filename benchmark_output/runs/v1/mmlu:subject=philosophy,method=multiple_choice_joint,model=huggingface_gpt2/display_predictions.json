@@ -1,0 +1,142 @@
+[
+  {
+    "instance_id": "id147",
+    "train_trial_index": 0,
+    "predicted_text": " D",
+    "mapped_output": "meaning in an afterlife",
+    "stats": {
+      "num_train_trials": 1.0,
+      "num_prompt_tokens": 333.0,
+      "num_output_tokens": 1.0,
+      "num_train_instances": 5.0,
+      "prompt_truncated": 0.0,
+      "exact_match": 0.0
+    }
+  },
+  {
+    "instance_id": "id11",
+    "train_trial_index": 0,
+    "predicted_text": " D",
+    "mapped_output": "the sensible world would consist of unchanging Forms.",
+    "stats": {
+      "num_train_trials": 1.0,
+      "num_prompt_tokens": 420.0,
+      "num_output_tokens": 1.0,
+      "num_train_instances": 5.0,
+      "prompt_truncated": 0.0,
+      "exact_match": 0.0
+    }
+  },
+  {
+    "instance_id": "id65",
+    "train_trial_index": 0,
+    "predicted_text": " D",
+    "mapped_output": "would not be destroyed because there was no essence or form originally to be destroyed; there are only individuals, not universal essences or natures of things.",
+    "stats": {
+      "num_train_trials": 1.0,
+      "num_prompt_tokens": 424.0,
+      "num_output_tokens": 1.0,
+      "num_train_instances": 5.0,
+      "prompt_truncated": 0.0,
+      "exact_match": 0.0
+    }
+  },
+  {
+    "instance_id": "id344",
+    "train_trial_index": 0,
+    "predicted_text": " D",
+    "mapped_output": "pragmatic decisions regarding the display of art",
+    "stats": {
+      "num_train_trials": 1.0,
+      "num_prompt_tokens": 359.0,
+      "num_output_tokens": 1.0,
+      "num_train_instances": 5.0,
+      "prompt_truncated": 0.0,
+      "exact_match": 0.0
+    }
+  },
+  {
+    "instance_id": "id59",
+    "train_trial_index": 0,
+    "predicted_text": " D",
+    "mapped_output": "none of the above.",
+    "stats": {
+      "num_train_trials": 1.0,
+      "num_prompt_tokens": 336.0,
+      "num_output_tokens": 1.0,
+      "num_train_instances": 5.0,
+      "prompt_truncated": 0.0,
+      "exact_match": 0.0
+    }
+  },
+  {
+    "instance_id": "id291",
+    "train_trial_index": 0,
+    "predicted_text": " D",
+    "mapped_output": "the universe exists only in the mind",
+    "stats": {
+      "num_train_trials": 1.0,
+      "num_prompt_tokens": 360.0,
+      "num_output_tokens": 1.0,
+      "num_train_instances": 5.0,
+      "prompt_truncated": 0.0,
+      "exact_match": 0.0
+    }
+  },
+  {
+    "instance_id": "id131",
+    "train_trial_index": 0,
+    "predicted_text": " D",
+    "mapped_output": "confused scientific theories.",
+    "stats": {
+      "num_train_trials": 1.0,
+      "num_prompt_tokens": 336.0,
+      "num_output_tokens": 1.0,
+      "num_train_instances": 5.0,
+      "prompt_truncated": 0.0,
+      "exact_match": 0.0
+    }
+  },
+  {
+    "instance_id": "id222",
+    "train_trial_index": 0,
+    "predicted_text": " D",
+    "mapped_output": "enjoyments",
+    "stats": {
+      "num_train_trials": 1.0,
+      "num_prompt_tokens": 342.0,
+      "num_output_tokens": 1.0,
+      "num_train_instances": 5.0,
+      "prompt_truncated": 0.0,
+      "exact_match": 1.0
+    }
+  },
+  {
+    "instance_id": "id259",
+    "train_trial_index": 0,
+    "predicted_text": " D",
+    "mapped_output": "not based on a legitimate method of reasoning",
+    "stats": {
+      "num_train_trials": 1.0,
+      "num_prompt_tokens": 337.0,
+      "num_output_tokens": 1.0,
+      "num_train_instances": 5.0,
+      "prompt_truncated": 0.0,
+      "exact_match": 0.0
+    }
+  },
+  {
+    "instance_id": "id105",
+    "train_trial_index": 0,
+    "predicted_text": " D",
+    "mapped_output": "time",
+    "stats": {
+      "num_train_trials": 1.0,
+      "num_prompt_tokens": 327.0,
+      "num_output_tokens": 1.0,
+      "num_train_instances": 5.0,
+      "prompt_truncated": 0.0,
+      "exact_match": 0.0
+    }
+  }
+]
